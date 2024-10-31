@@ -365,7 +365,7 @@ resource "aws_autoscaling_group" "ecs_asg" {
   vpc_zone_identifier  = [aws_subnet.lab-subnet-public-1.id]
   launch_template {
     id      = aws_launch_template.ecs_launch_template.id
-    version = "$$Latest"
+    version = "$Latest"
   }
   desired_capacity     = 1
   min_size             = 0
